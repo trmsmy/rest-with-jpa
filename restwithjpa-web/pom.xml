@@ -50,12 +50,12 @@
 			<artifactId>jersey-spring3</artifactId>
 		</dependency>
 	</dependencies>
-	
+
 	<build>
-	
+
 		<!-- we do not want version in the WAR name -->
 		<finalName>restwithjpa-web</finalName>
-	
+
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -90,7 +90,7 @@
 				<artifactId>jetty-maven-plugin</artifactId>
 				<version>${jetty.version}</version>
 				<configuration>
-					     
+
 					<jettyConfig>${project.basedir}/src/main/resources/config/jetty9.xml</jettyConfig>
 					<stopKey>STOP</stopKey>
 					<stopPort>9999</stopPort>
@@ -142,5 +142,5 @@
 			</plugin>
 		</plugins>
 	</build>
-	
+
 </project>

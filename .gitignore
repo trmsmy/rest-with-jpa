@@ -2,3 +2,4 @@
 .project
 .settings/
 restwithjpa-*/target/
+/*.tlog

@@ -25,18 +25,10 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
-			<!-- <exclusions>
-				Exclude these 2 transitive dependencies to avoid clash with app 
-					server xml-api & transactionManager
-				<exclusion>
-					<groupId>xml-apis</groupId>
-					<artifactId>xml-apis</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.jboss.spec.javax.transaction</groupId>
-					<artifactId>jboss-transaction-api_1.2_spec</artifactId>
-				</exclusion>
-			</exclusions> -->
+			<!-- <exclusions> Exclude these 2 transitive dependencies to avoid clash 
+				with app server xml-api & transactionManager <exclusion> <groupId>xml-apis</groupId> 
+				<artifactId>xml-apis</artifactId> </exclusion> <exclusion> <groupId>org.jboss.spec.javax.transaction</groupId> 
+				<artifactId>jboss-transaction-api_1.2_spec</artifactId> </exclusion> </exclusions> -->
 		</dependency>
 
 		<dependency>
@@ -67,11 +59,8 @@
 			<artifactId>spring-data-jpa</artifactId>
 		</dependency>
 
-<!-- 		<dependency>
-			<groupId>org.jboss.spec.javax.transaction</groupId>
-			<artifactId>jboss-transaction-api_1.2_spec</artifactId>
-			<scope>test</scope>
-		</dependency> -->
+		<!-- <dependency> <groupId>org.jboss.spec.javax.transaction</groupId> <artifactId>jboss-transaction-api_1.2_spec</artifactId> 
+			<scope>test</scope> </dependency> -->
 
 		<dependency>
 			<groupId>org.apache.commons</groupId>
@@ -83,11 +72,20 @@
 			<artifactId>restwithjpa-model</artifactId>
 		</dependency>
 
-<!-- 		<dependency>
-			<groupId>com.trmsmy.restwithjpa</groupId>
-			<artifactId>restwithjpa-test</artifactId>
-			<scope>test</scope>
+
+		<dependency>
+			<groupId>org.codehaus.btm</groupId>
+			<artifactId>btm</artifactId>
+			<version>2.1.4</version>
 		</dependency>
- -->
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.27</version>
+		</dependency>
+
+		<!-- <dependency> <groupId>com.trmsmy.restwithjpa</groupId> <artifactId>restwithjpa-test</artifactId> 
+			<scope>test</scope> </dependency> -->
 	</dependencies>
 </project>

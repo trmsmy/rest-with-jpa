@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration debug="true">
+	<Properties>
+		<Property name="log-path">target/logs</Property>
+	</Properties>
+
+	<Appenders>
+		<RollingFile name="RollingFile" fileName="${log-path}/restwithjpa.log"
+			filePattern="${log-path}/restwithjpa-%d{yyyy-MM-dd}-%i.log">
+			<PatternLayout>
+				<pattern>[%t] [%d] %-5p %c %x - %m%n</pattern>
+			</PatternLayout>
+			<Policies>
+				<SizeBasedTriggeringPolicy size="10 MB" />
+			</Policies>
+			<DefaultRolloverStrategy max="4" />
+		</RollingFile>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout>
+				<pattern>[%t] [%d] %-5p %c %x - %m%n</pattern>
+			</PatternLayout>
+		</Console>
+	</Appenders>
+	<Loggers>
+
+		<Logger name="com.trmsmy" level="debug" />
+		<Logger name="org.springframework" level="info" />
+
+		<!--<Logger name="org.hibernate.hql.internal.ast.QueryTranslatorImpl" level="info"/> -->
+		<!--<Logger name="org.hibernate.hql.internal.ast.tree" level="info"/> -->
+		<!--<Logger name="org.hibernate.engine.jdbc.spi.SqlExceptionHelper" level="info"/> -->
+		<!--<Logger name="org.hibernate.type.descriptor.converter.AttributeConverterSqlTypeDescriptorAdapter" 
+			level="info"/> -->
+		<!--<Logger name="org.hibernate.loader.plan.build.internal" level="info"/> -->
+		<!--<Logger name="org.hibernate.persister.walking.spi" level="info"/> -->
+		<!--<Logger name="org.hibernate.hql.internal" level="info"/> -->
+		<!--<Logger name="org.hibernate.type.BasicTypeRegistry" level="info"/> -->
+		<!--<Logger name="org.hibernate.id.factory.internal" level="info"/> -->
+
+		<Logger name="org.hibernate" level="info" />
+		<Logger name="org.hibernate.cache" level="trace" />
+		<Logger name="org.hibernate.stat" level="debug" />
+
+		<!--<Logger name="org.hibernate.SQL" level="debug"/> -->
+
+		<!--log the SQL -->
+		<Logger name="org.hibernate.SQL" level="debug" />
+
+		<Logger name="org.hibernate.stat.internal.ConcurrentStatisticsImpl"
+			level="debug" />
+
+		<!--log query args -->
+		<Logger name="org.hibernate.type.descriptor.sql.BasicBinder"
+			level="trace" />
+
+		<Logger name="org.hibernate.hql.internal.ast.QueryTranslatorImpl"
+			level="info" />
+		<Logger name="org.hibernate.hql.internal.ast.tree" level="info" />
+		<Logger
+			name="org.hibernate.engine.internal.StatisticalLoggingSessionEventListener"
+			level="warn" />
+
+		<!--<Logger name="org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader" 
+			level="info" /> -->
+		<!--<Logger name="org.springframework.data.repository.config.RepositoryComponentProvider" 
+			level="info" /> -->
+		<!--<Logger name="org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider" 
+			level="info" /> -->
+		<!--<Logger name="org.springframework.core.io.support.PathMatchingResourcePatternResolver" 
+			level="info" /> -->
+		<!--<Logger name="org.springframework.core.env.PropertySourcesPropertyResolver" 
+			level="info" /> -->
+		<!--<Logger name="org.springframework.beans.factory.support.DefaultListableBeanFactory" 
+			level="info" /> -->
+		<Root level="debug">
+			<Appender-ref ref="RollingFile" />
+			<Appender-ref ref="Console" />
+		</Root>
+	</Loggers>
+
+</Configuration>

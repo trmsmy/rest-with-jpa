@@ -1,10 +1,11 @@
-package com.trmsmy.restwithjpa.model.stm;
+package com.trmsmy.restwithjpa.model;
 
 import java.util.List;
 
 public class Playlist {
 
 	private int id;
+	private String name;
 	private List<Track> tracks;
 
 	public int getId() {
@@ -13,6 +14,14 @@ public class Playlist {
 
 	public void setId(int playlistId) {
 		this.id = playlistId;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public List<Track> getTracks() {

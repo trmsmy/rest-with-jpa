@@ -1,5 +1,9 @@
-package com.trmsmy.restwithjpa.model.stm;
+package com.trmsmy.restwithjpa.model;
 
+/**
+ * @author trmsmy
+ *
+ */
 public class Track {
 
 	private int id;
@@ -38,4 +42,10 @@ public class Track {
 	public void setAlbumId(int albumId) {
 		this.albumId = albumId;
 	}
+
+	@Override
+	public String toString() {
+		return "Track [id=" + id + ", name=" + name + ", description=" + description + ", albumId=" + albumId + "]";
+	}
+	
 }
